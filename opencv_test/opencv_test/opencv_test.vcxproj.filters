@@ -30,5 +30,8 @@
     <ClCompile Include="draw.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="rand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

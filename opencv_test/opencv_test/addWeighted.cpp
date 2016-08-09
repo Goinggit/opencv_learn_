@@ -8,7 +8,7 @@ using namespace cv;
 
 int addw_main(int argc, char** argv)
 {
-	//double alpha = 0.5; double beta; double input;
+	double alpha = 0.5; double beta; double input;
 
 	Mat src1, src2, dst;
 	/// Ask the user enter alpha
