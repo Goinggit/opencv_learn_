@@ -1,0 +1,15 @@
+﻿生成启动时间为 2016/8/5 15:55:37。
+     1>项目“D:\opencv_project\opencv_test\opencv_test\opencv_test.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt draw.cpp
+         draw.cpp
+     1>d:\opencv_project\opencv_test\opencv_test\draw.cpp(31): error C2065: “w”: 未声明的标识符
+     1>d:\opencv_project\opencv_test\opencv_test\draw.cpp(32): error C2065: “w”: 未声明的标识符
+     1>d:\opencv_project\opencv_test\opencv_test\draw.cpp(38): error C2665: “cv::ellipse”: 2 个重载中没有一个可以转换所有参数类型
+                 d:\opencv\build\include\opencv2\core\core.hpp(2614): 可能是“void cv::ellipse(cv::Mat &,cv::Point,cv::Size,double,double,double,const cv::Scalar &,int,int,int)”
+                 尝试匹配参数列表“(cv::Mat, double, int, int, cv::Scalar_<double>, int, int)”时
+     1>已完成生成项目“D:\opencv_project\opencv_test\opencv_test\opencv_test.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.04
