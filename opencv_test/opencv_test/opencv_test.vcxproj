@@ -79,10 +79,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="addWeighted.cpp" />
+    <ClCompile Include="DFT.cpp" />
     <ClCompile Include="draw.cpp" />
     <ClCompile Include="light.cpp" />
     <ClCompile Include="mask.cpp" />
     <ClCompile Include="rand.cpp" />
+    <ClCompile Include="smooth.cpp" />
     <ClCompile Include="源.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

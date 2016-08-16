@@ -10,7 +10,7 @@ int Drawing_Random_Lines(Mat image, char* window_name, RNG rng);
 int Drawing_Random_ellipse(Mat image, char* window_name, RNG rng);
 int Drawing_Random_text(Mat image, char* window_name, RNG rng);
 
-int main(int argc, char **argv)
+int rand_main(int argc, char **argv)
 {
 	RNG rng(0xFFFFFFF0);
 	char atom_window[] = "Drawing 1: Atom";
@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 	waitKey(0);
 	imshow(rook_window, rook_image);
 	waitKey(0);
+	return 0;
 }
 static Scalar randomColor(RNG& rng)
 {

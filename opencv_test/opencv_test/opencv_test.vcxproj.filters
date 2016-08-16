@@ -33,5 +33,11 @@
     <ClCompile Include="rand.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="DFT.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="smooth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
