@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="源.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="mask.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -37,6 +34,24 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="smooth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="trackbar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="morphologyEx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="first_step.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pyramid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="threshold.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sobel.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

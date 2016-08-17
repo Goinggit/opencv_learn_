@@ -1,22 +1,26 @@
-﻿生成启动时间为 2016/8/16 16:54:41。
+﻿生成启动时间为 2016/8/17 21:11:34。
      1>项目“D:\opencv_project\opencv_learn\opencv_test\opencv_test\opencv_test.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt DFT.cpp smooth.cpp
-         smooth.cpp
-         DFT.cpp
-         正在生成代码...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt sobel.cpp
+         sobel.cpp
+     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\sobel.cpp(18): warning C4101: “c”: 未引用的局部变量
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\opencv_project\opencv_learn\opencv_test\Debug\opencv_test.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\opencv_project\opencv_learn\opencv_test\Debug\opencv_test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\opencv_project\opencv_learn\opencv_test\Debug\opencv_test.lib" /MACHINE:X86 Debug\addWeighted.obj
          Debug\DFT.obj
          Debug\draw.obj
          Debug\light.obj
          Debug\mask.obj
+         Debug\morphologyEx.obj
+         Debug\pyramid.obj
          Debug\rand.obj
          Debug\smooth.obj
-         "Debug\源.obj"
+         Debug\sobel.obj
+         Debug\threshold.obj
+         Debug\trackbar.obj
+         Debug\first_step.obj
          opencv_test.vcxproj -> D:\opencv_project\opencv_learn\opencv_test\Debug\opencv_test.exe
      1>已完成生成项目“D:\opencv_project\opencv_learn\opencv_test\opencv_test\opencv_test.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:03.59
+已用时间 00:00:01.96
