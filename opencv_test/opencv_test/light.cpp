@@ -4,9 +4,8 @@
 
 using namespace std;
 using namespace cv;
-#pragma comment( lib, "opencv_highgui2410d.lib")
-#pragma comment( lib, "opencv_core2410d.lib")
-#pragma comment(lib,"opencv_imgproc2410d.lib") 
+
+
 
 double alpha; /**< 控制对比度 */
 int beta;  /**< 控制亮度 */

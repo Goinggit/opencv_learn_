@@ -1,10 +1,12 @@
-#include <cv.h>
-#include <highgui.h>
-#include <iostream>
-#pragma comment( lib, "opencv_highgui2410d.lib")
-#pragma comment( lib, "opencv_core2410d.lib")
-#pragma comment(lib,"opencv_imgproc2410d.lib") 
+#include <iostream> // for standard I/O
+#include <string>   // for strings
+
+#include <opencv2/core/core.hpp>        // Basic OpenCV structures (cv::Mat)
+#include <opencv2/highgui/highgui.hpp>  // Video write
+#include "opencv2/imgproc/imgproc.hpp"  
+
 using namespace cv;
+
 void MyEllipse(Mat &img, double angle);
 void MyLine(Mat img, Point start, Point end);
 void MyFilledCircle(Mat img, int w);
@@ -57,6 +59,14 @@ void MyEllipse(Mat &img, double angle)
 		Scalar(255, 0, 0),
 		thickness,
 		lineType);
+	/*
+		椭圆将被画到图像 img 上
+		椭圆中心为点(w / 2.0, w / 2.0) 并且大小位于矩形(w / 4.0, w / 16.0) 内
+		椭圆旋转角度为 angle
+		椭圆扩展的弧度从 0 度到 360 度
+		图形颜色为 Scalar(255, 255, 0) ，既蓝色
+		绘椭圆的线粗为 thickness ，此处是2
+	*/
 }
 void MyLine(Mat img, Point start, Point end)
 {
@@ -68,6 +78,13 @@ void MyLine(Mat img, Point start, Point end)
 		Scalar(0, 255, 0),
 		thickness,
 		lineType);
+	/*
+	画一条从点 start 到点 end 的直线段
+	此线段将被画到图像 img 上
+	线的颜色由 Scalar( 0, 0, 0) 来定义，在此其相应RGB值为 黑色
+	线的粗细由 thickness 设定(此处设为 2)
+	此线为8联通 (lineType = 8)
+	*/
 }
 void MyFilledCircle(Mat img,int w)
 {
@@ -80,4 +97,11 @@ void MyFilledCircle(Mat img,int w)
 		Scalar(0, 0, 255),
 		thickness,
 		lineType);
+	/*
+	圆将被画到图像 ( img )上
+	圆心由点 center 定义
+	圆的半径为: w/32.0
+	圆的颜色为: Scalar(0, 0, 255) ，按BGR的格式为 红色
+	线粗定义为 thickness = -1, 因此次圆将被填充
+	*/
 }

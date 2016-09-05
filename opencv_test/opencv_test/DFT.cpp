@@ -1,9 +1,11 @@
-#include <cv.h>
-#include <highgui.h>
+
 #include <iostream>
-#pragma comment( lib, "opencv_highgui2410d.lib")
-#pragma comment( lib, "opencv_core2410d.lib")
-#pragma comment(lib,"opencv_imgproc2410d.lib") 
+#include <iostream> // for standard I/O
+#include <string>   // for strings
+
+#include <opencv2/core/core.hpp>        // Basic OpenCV structures (cv::Mat)
+#include <opencv2/highgui/highgui.hpp>  // Video write
+#include "opencv2/imgproc/imgproc.hpp"  
 using namespace cv;
 using namespace std;
 

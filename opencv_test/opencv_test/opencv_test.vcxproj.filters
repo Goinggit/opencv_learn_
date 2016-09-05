@@ -54,5 +54,92 @@
     <ClCompile Include="sobel.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Laplace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="canny.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HoughLines.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HoughCircles.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EqualizeHist .cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="calcHist .cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="compareHist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="emapping.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="warpAffine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="calcBackProject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="matchTemplate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="findcontours.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="convexHull.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="boundingRect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="moments.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pointPolygonTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="distanceTransform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="floodfill.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="harris.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Shi-Tomasi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cornerEigenValsAndVecs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cornerSubPix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatureDetector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="feature_describe.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FLANN.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="findHomography.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="face_ CascadeClassifier.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xml.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

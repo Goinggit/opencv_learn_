@@ -1,12 +1,13 @@
-#include <cv.h>
-#include <highgui.h>
-#include <iostream>
-#pragma comment( lib, "opencv_highgui2410d.lib")
-#pragma comment( lib, "opencv_core2410d.lib")
-#pragma comment(lib,"opencv_imgproc2410d.lib") 
+#include <iostream> // for standard I/O
+#include <string>   // for strings
+
+#include <opencv2/core/core.hpp>        // Basic OpenCV structures (cv::Mat)
+#include <opencv2/highgui/highgui.hpp>  // Video write
+#include "opencv2/imgproc/imgproc.hpp"  
+
 using namespace cv;
 
-int main()
+int sobel_main()
 {
 	Mat src, src_gray;
 	Mat grad;
@@ -26,13 +27,13 @@ int main()
 	}
 
 	GaussianBlur(src, src, Size(3, 3), 0, 0, BORDER_DEFAULT);
-	cvtColor(src, src_gray, CV_RGB2GRAY);//ddepth: 输出图像的深度，设定为 CV_16S 避免外溢。
+	cvtColor(src, src_gray, CV_RGB2GRAY);
 
 	Mat grad_x, grad_y;
 	Mat abs_grad_x, abs_grad_y;
 
-	Sobel(src,grad_x,ddepth,1,0,3);
-	convertScaleAbs(grad_x, abs_grad_x);
+	Sobel(src,grad_x,ddepth,1,0,3);//ddepth: 输出图像的深度，设定为 CV_16S 避免外溢。
+	convertScaleAbs(grad_x, abs_grad_x); //将输出图像的深度转化为 CV_8U :
 
 	Sobel(src, grad_y, ddepth, 0, 1, 3);
 	/*

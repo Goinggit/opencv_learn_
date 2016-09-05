@@ -1,11 +1,16 @@
-#pragma comment( lib, "opencv_highgui2410d.lib")
-#pragma comment( lib, "opencv_core2410d.lib")
-#include<opencv2\opencv.hpp>
+#include <iostream> // for standard I/O
+#include <string>   // for strings
+
+#include <opencv2/core/core.hpp>        // Basic OpenCV structures (cv::Mat)
+#include <opencv2/highgui/highgui.hpp>  // Video write
+#include "opencv2/imgproc/imgproc.hpp"  
+
+
 #include <iostream>
 using namespace cv;
 int main_1()
 {
-	Mat A(2,2,CV_8UC3, Scalar(0,0,255));
+	Mat A(2,2, CV_8UC3, Scalar(0,0,255));
 	//Mat A = imread("tiger.jpg", CV_LOAD_IMAGE_COLOR);
 	if (!A.data)
 	{
@@ -14,7 +19,7 @@ int main_1()
 		return -1;
 	}
 	randu(A, Scalar::all(0), Scalar::all(255));
-	std::cout << "M = " << format(A, "python")<< std::endl;
+	std::cout << "M = " << A << std::endl;
 	system("pause");
 	return 0;
 }
