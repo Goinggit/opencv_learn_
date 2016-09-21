@@ -122,6 +122,7 @@
     <ClCompile Include="pointPolygonTest.cpp" />
     <ClCompile Include="pyramid.cpp" />
     <ClCompile Include="rand.cpp" />
+    <ClCompile Include="rotateRect.cpp" />
     <ClCompile Include="Shi-Tomasi.cpp" />
     <ClCompile Include="smooth.cpp" />
     <ClCompile Include="sobel.cpp" />

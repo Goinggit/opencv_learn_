@@ -47,7 +47,7 @@ int wrapAddine_main()
 	// 计算绕图像中点顺时针旋转50度缩放因子为0.6的旋转矩阵
 	Point center = Point(warp_dst.cols / 2, warp_dst.rows / 2);
 	double angle = -50.0;
-	double scale = 1;
+	double scale = 0.6;
 
 	/// 通过上面的旋转细节信息求得旋转矩阵
 	rot_mat = getRotationMatrix2D(center, angle, scale);

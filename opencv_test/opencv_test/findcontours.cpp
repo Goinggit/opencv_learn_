@@ -17,7 +17,7 @@ extern RNG rng(12345);
 void thresh_callback(int, void*);
 
 /** @function main */
-int findcontours_main(int argc, char** argv)
+int main(int argc, char** argv)
 {
 	/// 加载源图像
 	findcon_src = imread("1.jpg");
@@ -49,6 +49,8 @@ void thresh_callback(int, void*)
 	Canny(findcon_src_gray, canny_output, findcon_thresh, findcon_thresh * 3, 3);
 	/// 寻找轮廓
 	findContours(canny_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
+	std::cout << hierarchy[0] << std::endl;
+	std::cout << contours[0] << std::endl;
 	/*
 	void findContours(InputOutputArray image, OutputArrayOfArrays contours, OutputArray hierarchy, int mode, int method, Pointoffset=Point())
 
@@ -59,6 +61,8 @@ void thresh_callback(int, void*)
 	hierarchy：可有可無的輸出向量，以階層的方式記錄所有輪廓。
 	mode：取得輪廓的模式。
 	method：儲存輪廓點的方法。
+
+
 	mode：取得輪廓的模式，有以下幾種可選擇：
 
 	CV_RETR_EXTERNAL：只取最外層的輪廓。

@@ -141,5 +141,8 @@
     <ClCompile Include="xml.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="rotateRect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

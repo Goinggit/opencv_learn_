@@ -63,7 +63,7 @@ static ostream& operator<<(ostream& out, const MyData& m)
 	return out;
 }
 
-int main(int ac, char** av)
+int xml_main(int ac, char** av)
 {
 	
 

@@ -8,16 +8,16 @@
 #include "opencv2/imgproc/imgproc.hpp"  
 using namespace cv;
 
-int comparehist_main()
+int calcHist_main()
 {
 	Mat src_base, hsv_base;
 	Mat src_test1, hsv_test1;
 	Mat src_test2, hsv_test2;
 	Mat hsv_half_down;
 
-	src_base = imread("1.jpg");
-	src_test1 = imread("1.jpg");
-	src_test2 = imread("1.jpg");
+	src_base = imread("E:\\JP.VideoAnalysis\\output\\objects\\1152_2_10_(1734,508,1794,612).jpg");
+	src_test1 = imread("E:\\JP.VideoAnalysis\\output\\objects\\1167_1_10_(1788,556,1854,604).jpg");
+	src_test2 = imread("E:\\JP.VideoAnalysis\\output\\objects\\1136_1_10_(1674,608,1734,668).jpg");
 	if (!src_base.data){
 		return -1;
 	}

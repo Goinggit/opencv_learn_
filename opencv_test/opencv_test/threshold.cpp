@@ -24,7 +24,8 @@ void Threshold_Demo(int, void*)
 {
 	/* threshold_type:  0: 二进制阈值     1: 反二进制阈值     2: 截断阈值     3: 0阈值     4: 反0阈值   */
 
-	threshold(src_gray, Threshold_dst, threshold_value, max_BINARY_value, threshold_type);
+	threshold(src_gray, Threshold_dst, threshold_value, max_BINARY_value, threshold_type | CV_THRESH_OTSU);
+	//threshold(src_gray, Threshold_dst, threshold_value, max_BINARY_value, threshold_type);
 	/*
 	src_gray: 输入的灰度图像的地址。
 	dst: 输出图像的地址。
@@ -34,7 +35,7 @@ void Threshold_Demo(int, void*)
 	*/
 	imshow(Threshold_window_name, Threshold_dst);
 }
-int threhold_main()
+int Threshold_main()
 {
 	Threshold_src = imread("tiger.jpg");
 
