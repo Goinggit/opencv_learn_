@@ -17,7 +17,7 @@ extern RNG rng(12345);
 void thresh_callback(int, void*);
 
 /** @function main */
-int main(int argc, char** argv)
+int findcon_main(int argc, char** argv)
 {
 	/// º”‘ÿ‘¥ÕºœÒ
 	findcon_src = imread("1.jpg");

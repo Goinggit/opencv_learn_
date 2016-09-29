@@ -126,6 +126,7 @@
     <ClCompile Include="Shi-Tomasi.cpp" />
     <ClCompile Include="smooth.cpp" />
     <ClCompile Include="sobel.cpp" />
+    <ClCompile Include="SVM.cpp" />
     <ClCompile Include="threshold.cpp" />
     <ClCompile Include="trackbar.cpp" />
     <ClCompile Include="first_step.cpp" />
