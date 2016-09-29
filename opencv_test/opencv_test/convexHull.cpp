@@ -10,7 +10,7 @@ using namespace std;
 Mat convex_src; Mat convex_src_gray;
 int convex_thresh = 100;
 int convex_max_thresh = 255;
-extern RNG rng;
+RNG rng2(12345);
 
 /// Function header
 void convex_thresh_callback(int, void*);
@@ -42,7 +42,7 @@ void convex_thresh_callback(int, void*)
 {
 	//Mat src_copy = convex_src.clone();
 	Mat threshold_output;
-	vector<vector<Point>> contours;
+	vector< vector<Point> > contours;
 	vector<Vec4i> hierarchy;
 
 	/// 对图像进行二值化
@@ -52,7 +52,7 @@ void convex_thresh_callback(int, void*)
 	findContours(threshold_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
 
 	/// 对每个轮廓计算其凸包
-	vector<vector<Point>>hull(contours.size());
+	vector< vector<Point> >hull(contours.size());
 	for (unsigned int i = 0; i < contours.size(); i++)
 	{
 		convexHull(Mat(contours[i]), hull[i], false);
@@ -74,7 +74,7 @@ void convex_thresh_callback(int, void*)
 	Mat drawing = Mat::zeros(threshold_output.size(), CV_8UC3);
 	for (unsigned int i = 0; i< contours.size(); i++)
 	{
-		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
+		Scalar color = Scalar(rng2.uniform(0, 255), rng2.uniform(0, 255), rng2.uniform(0, 255));
 		drawContours(drawing, contours, i, color, 1, 8, vector<Vec4i>(), 0, Point());
 		drawContours(drawing, hull, i, color, 1, 8, vector<Vec4i>(), 0, Point());
 	}

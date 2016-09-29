@@ -1,6 +1,6 @@
 #include <iostream> // for standard I/O
 #include <string>   // for strings
-
+#include <stdio.h>
 #include <opencv2/core/core.hpp>        // Basic OpenCV structures (cv::Mat)
 #include <opencv2/highgui/highgui.hpp>  // Video write
 #include "opencv2/imgproc/imgproc.hpp"  
@@ -11,7 +11,7 @@ using namespace std;
 Mat comments_src; Mat comments_src_gray;
 int comments_thresh = 100;
 int comments_max_thresh = 255;
-extern RNG rng;
+RNG rng5(12312);
 
 /// 函数声明
 void comments_thresh_callback(int, void*);
@@ -42,7 +42,7 @@ int coments_main(int argc, char** argv)
 void comments_thresh_callback(int, void*)
 {
 	Mat canny_output;
-	vector<vector<Point>> contours;
+	vector< vector<Point> > contours;
 	vector<Vec4i> hierarchy;
 
 	/// 使用Canndy检测边缘
@@ -68,7 +68,7 @@ void comments_thresh_callback(int, void*)
 	Mat drawing = Mat::zeros(canny_output.size(), CV_8UC3);
 	for (int i = 0; i< contours.size(); i++)
 	{
-		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
+		Scalar color = Scalar(rng5.uniform(0, 255), rng5.uniform(0, 255), rng5.uniform(0, 255));
 		drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, Point());
 		circle(drawing, mc[i], 4, color, -1, 8, 0);
 	}

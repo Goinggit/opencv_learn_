@@ -1,17 +1,17 @@
 #include <iostream> // for standard I/O
 #include <string>   // for strings
-
+#include <vector>
 #include <opencv2/core/core.hpp>        // Basic OpenCV structures (cv::Mat)
 #include <opencv2/highgui/highgui.hpp>  // Video write
 #include "opencv2/imgproc/imgproc.hpp"  
-
+#include <stdlib.h>
 using namespace std;
 using namespace cv;
 
 Mat boundrect_src; Mat boundrect_src_gray;
 int boundrect_thresh = 100;
 int boundrect_max_thresh = 255;
-extern RNG rng;
+ RNG rng1(12345);
 
 /// 函数声明
 void boundrect_thresh_callback(int, void*);
@@ -45,7 +45,7 @@ int bounding_main(int argc, char** argv)
 void boundrect_thresh_callback(int, void*)
 {
 	Mat threshold_output;
-	vector<vector<Point>> contours;
+	vector< vector<Point> > contours;
 	vector<Vec4i> hierarchy;
 
 	/// 使用Threshold检测边缘
@@ -54,7 +54,7 @@ void boundrect_thresh_callback(int, void*)
 	findContours(threshold_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
 
 	/// 多边形逼近轮廓 + 获取矩形和圆形边界框
-	vector<vector<Point>> contours_poly(contours.size());
+	vector< vector<Point> > contours_poly(contours.size());
 	vector<Rect> boundRect(contours.size());
 	vector<Point2f>center(contours.size());
 	vector<float>radius(contours.size());
@@ -82,7 +82,7 @@ void boundrect_thresh_callback(int, void*)
 	Mat drawing = Mat::zeros(threshold_output.size(), CV_8UC3);
 	for (unsigned int i = 0; i< contours.size(); i++)
 	{
-		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
+		Scalar color = Scalar(rng1.uniform(0, 255), rng1.uniform(0, 255), rng1.uniform(0, 255));
 		drawContours(drawing, contours_poly, i, color, 1, 8, vector<Vec4i>(), 0, Point());
 		rectangle(drawing, boundRect[i].tl(), boundRect[i].br(), color, 2, 8, 0);
 		circle(drawing, center[i], (int)radius[i], color, 2, 8, 0);

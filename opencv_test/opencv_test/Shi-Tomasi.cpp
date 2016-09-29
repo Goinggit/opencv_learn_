@@ -13,7 +13,7 @@ Mat shit_tomasi_src, shit_tomasi_src_gray;
 int shit_tomasi_maxCorners = 23;
 int shit_tomasi_maxTrackbar = 1000;
 
-extern RNG rng;
+RNG rng6(6666);
 char* shit_tomasi_source_window = "Image";
 
 /// Function header
@@ -92,8 +92,8 @@ void goodFeaturesToTrack_Demo(int, void*)
 	int r = 4;
 	for (int i = 0; i < corners.size(); i++)
 	{
-		circle(copy, corners[i], r, Scalar(rng.uniform(0, 255), rng.uniform(0, 255),
-			rng.uniform(0, 255)), -1, 8, 0);
+		circle(copy, corners[i], r, Scalar(rng6.uniform(0, 255), rng6.uniform(0, 255),
+			rng6.uniform(0, 255)), -1, 8, 0);
 	}
 
 	/// Show what you got

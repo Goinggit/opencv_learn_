@@ -9,7 +9,7 @@ using namespace cv;
 
 int poin_test_main(int argc, char** argv)
 {
-	/// 创建一个图形     
+	/// 创建一个图形
 	const int r = 100;
 	Mat src = Mat::zeros(Size(4 * r, 4 * r), CV_8UC1);
 
@@ -30,7 +30,7 @@ int poin_test_main(int argc, char** argv)
 	}
 
 	/// 得到轮廓
-	vector<vector<Point>> contours; 
+	vector< vector<Point> > contours;
 	vector<Vec4i> hierarchy;
 	Mat src_copy = src.clone();
 
@@ -55,7 +55,7 @@ int poin_test_main(int argc, char** argv)
 			measure_dist
 			如果非0，函数将估算点到轮廓最近边的距离。
 			函数cvPointPolygonTest 决定测试点是否在轮廓内，轮廓外，还是轮廓的边上（或者共边的交点上），它的返回值是正负零，
-			相对应的，当measure_dist=0时，返回值是1, -1,0, 同样当 measure_dist≠0 ，它是返回一个从点到最近的边的带符号距离。[1] 
+			相对应的，当measure_dist=0时，返回值是1, -1,0, 同样当 measure_dist≠0 ，它是返回一个从点到最近的边的带符号距离。[1]
 			*/
 			
 			//printf("size = %f", raw_dist.at<float>(j, i));

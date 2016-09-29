@@ -19,7 +19,7 @@ int max_qualityLevel = 100;
 double myHarris_minVal; double myHarris_maxVal;
 double myShiTomasi_minVal; double myShiTomasi_maxVal;
 
-extern RNG rng;
+RNG rng3(123456);
 
 char* myHarris_window = "My Harris corner detector";
 char* myShiTomasi_window = "My Shi Tomasi corner detector";
@@ -50,15 +50,15 @@ int cornerEigenValsAndVecs_main(int argc, char** argv)
 
 	cornerEigenValsAndVecs(cornerEigenValsAndVecs_src_gray, myHarris_dst, blockSize, apertureSize, BORDER_DEFAULT);
 	/*
-		cornerEigenValsAndVecs£¨£©
-		×÷ÓÃ£º¼ÆËãÍ¼Ïñ¿éµÄÌØÕ÷ÖµºÍÌØÕ÷ÏòÁ¿ÓÃÓÚ½Çµã¼ì²â¡£
-		ÐÎÊ½£ºvoid cornerEigenValsAndVecs(InputArray src, OutputArray dst, int blockSize, int ksize, int borderType=BORDER_DEFAULT )£»
-		²ÎÊý£º
-		src£ºÊäÈëµ¥Í¨µÀ8Î»»ò¸¡µãÍ¼Ïñ£»
-		dst£ºÓÃÀ´´æ´¢½á¹ûµÄÍ¼Ïñ£»ËüÓÐsrcÏàÍ¬µÄ´óÐ¡ºÍÀàÐÍÎªCV_32FC(6)£»
-		blockSize£ºÁìÓò³ß´ç£»
-		ksize£ºSobel()Ëã×ÓµÄ¿×¾¶²ÎÊý£»
-		borderType£ºÏñËØÍâÍÆ·½Ê½£»
+		cornerEigenValsAndVecsï¿½ï¿½ï¿½ï¿½
+		ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½Çµï¿½ï¿½â¡£
+		ï¿½ï¿½Ê½ï¿½ï¿½void cornerEigenValsAndVecs(InputArray src, OutputArray dst, int blockSize, int ksize, int borderType=BORDER_DEFAULT )ï¿½ï¿½
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		srcï¿½ï¿½ï¿½ï¿½ï¿½ëµ¥Í¨ï¿½ï¿½8Î»ï¿½ò¸¡µï¿½Í¼ï¿½ï¿½
+		dstï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½srcï¿½ï¿½Í¬ï¿½Ä´ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªCV_32FC(6)ï¿½ï¿½
+		blockSizeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß´ç£»
+		ksizeï¿½ï¿½Sobel()ï¿½ï¿½ï¿½ÓµÄ¿×¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		borderTypeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½Ê½ï¿½ï¿½
 	*/
 
 	/* calculate Mc */
@@ -70,12 +70,12 @@ int cornerEigenValsAndVecs_main(int argc, char** argv)
 			float lambda_2 = myHarris_dst.at<Vec6f>(j, i)[1];
 			Mc.at<float>(j, i) = lambda_1*lambda_2 - 0.04*pow((lambda_1 + lambda_2), 2);
 			/*
-				pow£¨£©
-				×÷ÓÃ£º¸ø¾ØÕóÖÐÃ¿¸öÔªËØÔö¼ÓÒ»¸öÖ¸ÊýÃÝ¡£
-				ÐÎÊ½£ºvoid pow(folat a, int b)£»
-				²ÎÊý£º
-				a£ºÊäÈë¾ØÕó£»
-				b£ºÖ¸ÊýÃÝ£»
+				powï¿½ï¿½ï¿½ï¿½
+				ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ý¡ï¿½
+				ï¿½ï¿½Ê½ï¿½ï¿½void pow(folat a, int b)ï¿½ï¿½
+				ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				bï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ý£ï¿½
 				
 			*/
 		}
@@ -93,15 +93,15 @@ int cornerEigenValsAndVecs_main(int argc, char** argv)
 	myShiTomasi_dst = Mat::zeros(cornerEigenValsAndVecs_src_gray.size(), CV_32FC1);
 	cornerMinEigenVal(cornerEigenValsAndVecs_src_gray, myShiTomasi_dst, blockSize, apertureSize, BORDER_DEFAULT);
 	/*
-		cornerMinEigenVal£¨£©
-		×÷ÓÃ£º¼ÆËãÌÝ¶È¾ØÕóµÄ×îÐ¡ÌØÕ÷ÖµÓÃÓÚ½Çµã¼ì²â¡£
-		ÐÎÊ½£ºvoid cornerMinEigenVal(InputArray src, OutputArray dst, int blockSize, int ksize=3, int borderType=BORDER_DEFAULT )£»
-		²ÎÊý£º
-		src£ºÊäÈëµ¥Í¨µÀ8Î»»ò¸¡µãÍ¼Ïñ£»
-		dst£ºÓÃÀ´´æ´¢×îÐ¡ÌØÕ÷ÖµµÄÍ¼Ïñ£»ËüÓÐsrcÏàÍ¬µÄ´óÐ¡ºÍÀàÐÍÎªCV_32FC1£»
-		blockSize£ºÁìÓò³ß´ç£»
-		ksize£ºSobel()Ëã×ÓµÄ¿×¾¶²ÎÊý£»
-		borderType£ºÏñËØÍâÍÆ·½Ê½£»
+		cornerMinEigenValï¿½ï¿½ï¿½ï¿½
+		ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶È¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ú½Çµï¿½ï¿½â¡£
+		ï¿½ï¿½Ê½ï¿½ï¿½void cornerMinEigenVal(InputArray src, OutputArray dst, int blockSize, int ksize=3, int borderType=BORDER_DEFAULT )ï¿½ï¿½
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		srcï¿½ï¿½ï¿½ï¿½ï¿½ëµ¥Í¨ï¿½ï¿½8Î»ï¿½ò¸¡µï¿½Í¼ï¿½ï¿½
+		dstï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½srcï¿½ï¿½Í¬ï¿½Ä´ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªCV_32FC1ï¿½ï¿½
+		blockSizeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß´ç£»
+		ksizeï¿½ï¿½Sobel()ï¿½ï¿½ï¿½ÓµÄ¿×¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		borderTypeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½Ê½ï¿½ï¿½
 	*/
 
 	minMaxLoc(myShiTomasi_dst, &myShiTomasi_minVal, &myShiTomasi_maxVal, 0, 0, Mat());
@@ -130,8 +130,8 @@ void myShiTomasi_function(int, void*)
 			if (myShiTomasi_dst.at<float>(j, i) > myShiTomasi_minVal + (myShiTomasi_maxVal -
 				myShiTomasi_minVal)*myShiTomasi_qualityLevel / max_qualityLevel)
 			{
-				circle(myShiTomasi_copy, Point(i, j), 4, Scalar(rng.uniform(0, 255),
-					rng.uniform(0, 255), rng.uniform(0, 255)), -1, 8, 0);
+				circle(myShiTomasi_copy, Point(i, j), 4, Scalar(rng3.uniform(0, 255),
+					rng3.uniform(0, 255), rng3.uniform(0, 255)), -1, 8, 0);
 			}
 		}
 	}
@@ -152,8 +152,8 @@ void myHarris_function(int, void*)
 			if (Mc.at<float>(j, i) > myHarris_minVal + (myHarris_maxVal - myHarris_minVal)
 				*myHarris_qualityLevel / max_qualityLevel)
 			{
-				circle(myHarris_copy, Point(i, j), 4, Scalar(rng.uniform(0, 255), rng.uniform(0, 255),
-					rng.uniform(0, 255)), -1, 8, 0);
+				circle(myHarris_copy, Point(i, j), 4, Scalar(rng3.uniform(0, 255), rng3.uniform(0, 255),
+					rng3.uniform(0, 255)), -1, 8, 0);
 			}
 		}
 	}

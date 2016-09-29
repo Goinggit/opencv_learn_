@@ -2,7 +2,7 @@
 
 #include <iostream> // for standard I/O
 #include <string>   // for strings
-
+#include <stdio.h>
 #include <opencv2/core/core.hpp>        // Basic OpenCV structures (cv::Mat)
 #include <opencv2/highgui/highgui.hpp>  // Video write
 #include "opencv2/imgproc/imgproc.hpp"  
@@ -34,7 +34,7 @@ int calcHist_main()
 	cvtColor(src_test1, hsv_test1, CV_BGR2HSV);
 	cvtColor(src_test2, hsv_test2, CV_BGR2HSV);
 
-	//È¡»ù×¼ÏÂ°ëÉíÏñ  Range(start, end)
+	//È¡ï¿½ï¿½×¼ï¿½Â°ï¿½ï¿½ï¿½ï¿½ï¿½  Range(start, end)
 	hsv_half_down = hsv_base(Range(hsv_base.rows / 2, hsv_base.rows), Range(0, hsv_base.cols - 1));
 
 	int h_bins = 50; int s_bins = 60;
@@ -52,15 +52,15 @@ int calcHist_main()
 
 	calcHist(&hsv_base, 1, channels, Mat(), hist_base, 2, histSize, ranges);
 	/*
-	&hsv_base: ÊäÈëÊı×é(»òÊı×é¼¯)
-	1: ÊäÈëÊı×éµÄ¸öÊı (ÕâÀïÎÒÃÇÊ¹ÓÃÁËÒ»¸öµ¥Í¨µÀÍ¼Ïñ£¬ÎÒÃÇÒ²¿ÉÒÔÊäÈëÊı×é¼¯ )
-	channels: ĞèÒªÍ³¼ÆµÄÍ¨µÀ (dim)Ë÷Òı £¬ÕâÀïÎÒÃÇÖ»ÊÇÍ³¼ÆÁË»Ò¶È (ÇÒÃ¿¸öÊı×é¶¼ÊÇµ¥Í¨µÀ)ËùÒÔÖ»ÒªĞ´ 0 ¾ÍĞĞÁË¡£
-	Mat(): ÑÚÂë( 0 ±íÊ¾ºöÂÔ¸ÃÏñËØ)£¬ Èç¹ûÎ´¶¨Òå£¬Ôò²»Ê¹ÓÃÑÚÂë
-	hist_base: ´¢´æÖ±·½Í¼µÄ¾ØÕó
-	2: Ö±·½Í¼Î¬Êı
-	histSize: Ã¿¸öÎ¬¶ÈµÄbinÊıÄ¿
-	ranges: Ã¿¸öÎ¬¶ÈµÄÈ¡Öµ·¶Î§
-	uniform ºÍ accumulate: bin´óĞ¡ÏàÍ¬£¬Çå³şÖ±·½Í¼ºÛ¼£
+	&hsv_base: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½é¼¯)
+	1: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼¯ )
+	channels: ï¿½ï¿½ÒªÍ³ï¿½Æµï¿½Í¨ï¿½ï¿½ (dim)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Í³ï¿½ï¿½ï¿½Ë»Ò¶ï¿½ (ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½é¶¼ï¿½Çµï¿½Í¨ï¿½ï¿½)ï¿½ï¿½ï¿½ï¿½Ö»ÒªĞ´ 0 ï¿½ï¿½ï¿½ï¿½ï¿½Ë¡ï¿½
+	Mat(): ï¿½ï¿½ï¿½ï¿½( 0 ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½ ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½å£¬ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	hist_base: ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½Í¼ï¿½Ä¾ï¿½ï¿½ï¿½
+	2: Ö±ï¿½ï¿½Í¼Î¬ï¿½ï¿½
+	histSize: Ã¿ï¿½ï¿½Î¬ï¿½Èµï¿½binï¿½ï¿½Ä¿
+	ranges: Ã¿ï¿½ï¿½Î¬ï¿½Èµï¿½È¡Öµï¿½ï¿½Î§
+	uniform ï¿½ï¿½ accumulate: binï¿½ï¿½Ğ¡ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½Í¼ï¿½Û¼ï¿½
 	*/
 
 	normalize(hist_base, hist_base, 0, 1, NORM_MINMAX, -1, Mat());

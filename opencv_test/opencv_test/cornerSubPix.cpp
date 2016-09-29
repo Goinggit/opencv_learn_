@@ -13,7 +13,7 @@ Mat cornersub_src, cornersub_src_gray;
 int cornersub_maxCorners = 10;
 int cornersub_maxTrackbar = 25;
 
-extern RNG rng;
+RNG rng4(12324);
 char* cornersub_source_window = "Image";
 
 /// Function header
@@ -77,8 +77,8 @@ void cornersub_goodFeaturesToTrack_Demo(int, void*)
 	int r = 4;
 	for (int i = 0; i < corners.size(); i++)
 	{
-		circle(copy, corners[i], r, Scalar(rng.uniform(0, 255), rng.uniform(0, 255),
-			rng.uniform(0, 255)), -1, 8, 0);
+		circle(copy, corners[i], r, Scalar(rng4.uniform(0, 255), rng4.uniform(0, 255),
+			rng4.uniform(0, 255)), -1, 8, 0);
 	}
 
 	/// Show what you got
@@ -90,31 +90,31 @@ void cornersub_goodFeaturesToTrack_Demo(int, void*)
 	Size zeroZone = Size(-1, -1);
 	TermCriteria criteria = TermCriteria(CV_TERMCRIT_EPS + CV_TERMCRIT_ITER, 40, 0.001);
 	/*
-		TermCriteriaÄ£°åÀà£¬È¡´úÁËÖ®Ç°µÄCvTermCriteria£¬Õâ¸öÀàÊÇ×÷Îªµü´úËã·¨µÄÖÕÖ¹Ìõ¼þµÄ£¬Õâ¸öÀàÔÚ²Î¿¼ÊÖ²áÀï½éÉÜµÄºÜ¼òµ¥£¬ÎÒ²éÁËÐ©×ÊÁÏ£¬ÕâÀï½éÉÜÒ»ÏÂ¡£
-		¸ÃÀà±äÁ¿ÐèÒª3¸ö²ÎÊý£¬Ò»¸öÊÇÀàÐÍ£¬µÚ¶þ¸ö²ÎÊýÎªµü´úµÄ×î´ó´ÎÊý£¬×îºóÒ»¸öÊÇÌØ¶¨µÄãÐÖµ¡£
-		ÀàÐÍÓÐCV_TERMCRIT_ITER¡¢CV_TERMCRIT_EPS¡¢CV_TERMCRIT_ITER+CV_TERMCRIT_EPS£¬·Ö±ð´ú±í×Åµü´úÖÕÖ¹Ìõ¼þÎª´ïµ½×î´óµü´ú´ÎÊýÖÕÖ¹£¬
-		µü´úµ½ãÐÖµÖÕÖ¹£¬»òÕßÁ½Õß¶¼×÷Îªµü´úÖÕÖ¹Ìõ¼þ¡£
-		ÒÔÉÏµÄºê¶ÔÓ¦µÄc++µÄ°æ±¾·Ö±ðÎªTermCriteria::COUNT¡¢TermCriteria::EPS£¬ÕâÀïµÄCOUNTÒ²¿ÉÒÔÐ´³ÉMAX_ITER¡£
+		TermCriteriaÄ£ï¿½ï¿½ï¿½à£¬È¡ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½CvTermCriteriaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²Î¿ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ÜµÄºÜ¼òµ¥£ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â¡ï¿½
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òª3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CV_TERMCRIT_ITERï¿½ï¿½CV_TERMCRIT_EPSï¿½ï¿½CV_TERMCRIT_ITER+CV_TERMCRIT_EPSï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½Îªï¿½ïµ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		ï¿½ï¿½ï¿½ÏµÄºï¿½ï¿½Ó¦ï¿½ï¿½c++ï¿½Ä°æ±¾ï¿½Ö±ï¿½ÎªTermCriteria::COUNTï¿½ï¿½TermCriteria::EPSï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½COUNTÒ²ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½MAX_ITERï¿½ï¿½
 	*/
 
 	/// Calculate the refined corner locations
 	cornerSubPix(cornersub_src_gray, corners, winSize, zeroZone, criteria);
 
 	/*
-		cornerSubPix()º¯Êý
-		£¨1£©º¯ÊýÔ­ÐÍ
-		cornerSubPix()º¯ÊýÔÚ½Çµã¼ì²âÖÐ¾«È·»¯½ÇµãÎ»ÖÃ£¬Æäº¯ÊýÔ­ÐÍÈçÏÂ£º
+		cornerSubPix()ï¿½ï¿½ï¿½ï¿½
+		ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½
+		cornerSubPix()ï¿½ï¿½ï¿½ï¿½ï¿½Ú½Çµï¿½ï¿½ï¿½ï¿½Ð¾ï¿½È·ï¿½ï¿½ï¿½Çµï¿½Î»ï¿½Ã£ï¿½ï¿½äº¯ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½
 		[cpp] view plain copy
 		  1. C++: void cornerSubPix(InputArray image, InputOutputArray corners, Size winSize, Size zeroZone, TermCriteria criteria);  
 		  2. C: void cvFindCornerSubPix(const CvArr* image, CvPoint2D32f* corners, int count, CvSize win, CvSize zero_zone, CvTermCriteria criteria);  
 
-		£¨2£©º¯Êý²ÎÊý
-		º¯Êý²ÎÊýËµÃ÷ÈçÏÂ£º
-		image£ºÊäÈëÍ¼Ïñ
-		corners£ºÊäÈë½ÇµãµÄ³õÊ¼×ø±êÒÔ¼°¾«×¼»¯ºóµÄ×ø±êÓÃÓÚÊä³ö¡£
-		winSize£ºËÑË÷´°¿Ú±ß³¤µÄÒ»°ë£¬ÀýÈçÈç¹ûwinSize=Size(5,5)£¬ÔòÒ»¸ö´óÐ¡Îª£¨5*2+1£¬5*2+1£©µÄËÑË÷´°¿Ú½«±»Ê¹ÓÃ¡£
-		zeroZone£ºËÑË÷ÇøÓòÖÐ¼äµÄdead region±ß³¤µÄÒ»°ë£¬ÓÐÊ±ÓÃÓÚ±ÜÃâ×ÔÏà¹Ø¾ØÕóµÄÆæÒìÐÔ¡£Èç¹ûÖµÉèÎª(-1,-1)Ôò±íÊ¾Ã»ÓÐÕâ¸öÇøÓò¡£
-		criteria£º½Çµã¾«×¼»¯µü´ú¹ý³ÌµÄÖÕÖ¹Ìõ¼þ¡£Ò²¾ÍÊÇµ±µü´ú´ÎÊý³¬¹ýcriteria.maxCount£¬»òÕß½ÇµãÎ»ÖÃ±ä»¯Ð¡ÓÚcriteria.epsilonÊ±£¬Í£Ö¹µü´ú¹ý³Ì¡£
+		ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½
+		imageï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
+		cornersï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½Ä³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		winSizeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ß³ï¿½ï¿½ï¿½Ò»ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½winSize=Size(5,5)ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð¡Îªï¿½ï¿½5*2+1ï¿½ï¿½5*2+1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¡ï¿½
+		zeroZoneï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½dead regionï¿½ß³ï¿½ï¿½ï¿½Ò»ï¿½ë£¬ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Îª(-1,-1)ï¿½ï¿½ï¿½Ê¾Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		criteriaï¿½ï¿½ï¿½Çµã¾«×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½criteria.maxCountï¿½ï¿½ï¿½ï¿½ï¿½ß½Çµï¿½Î»ï¿½Ã±ä»¯Ð¡ï¿½ï¿½criteria.epsilonÊ±ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¡ï¿½
 	*/
 
 	/// Write them down
