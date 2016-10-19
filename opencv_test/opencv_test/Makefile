@@ -15,12 +15,13 @@ LIB_FLAG= -lopencv_core  -lopencv_highgui -lopencv_imgproc -lopencv_video -lopen
 
 OBJ_CPP = $(SRC_CPP:.cpp=.o)
 CPP_FLAGS =  -c -g -Wall
+CPP_LIBS_DIR = $(shell pkg-config --cflags --libs opencv)
 .SUFFIXES: .o .cpp
 .cpp.o:
-	$(CC)  $(CPP_FLAGS) $< -o $@
+	$(CC)  $(CPP_FLAGS) $(CPP_LIBS_DIR) $< -o $@
 all: $(Target)
 
 $(Target):$(OBJ_CPP)
-	$(CC) -g $(LIB_FLAG) -o $@ $^ $(MODULE_LIB)
+	$(CC) -g  -o $@ $^ $(CPP_LIBS_DIR)
 clean:
 	rm $(Target) *.o
