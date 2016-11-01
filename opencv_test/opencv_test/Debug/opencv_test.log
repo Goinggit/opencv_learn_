@@ -1,49 +1,49 @@
-﻿生成启动时间为 2016/9/28 16:13:56。
-     1>项目“D:\opencv_project\opencv_learn\opencv_test\opencv_test\opencv_test.vcxproj”在节点 2 上(Rebuild 个目标)。
+﻿生成启动时间为 2016/10/27 14:31:28。
+     1>项目“E:\opencv_learn_\opencv_test\opencv_test\opencv_test.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt addWeighted.cpp boundingRect.cpp calcBackProject.cpp "calcHist .cpp" canny.cpp compareHist.cpp convexHull.cpp cornerEigenValsAndVecs.cpp cornerSubPix.cpp DFT.cpp distanceTransform.cpp draw.cpp emapping.cpp "EqualizeHist .cpp" "face_ CascadeClassifier.cpp" FeatureDetector.cpp feature_describe.cpp findcontours.cpp findHomography.cpp FLANN.cpp floodfill.cpp harris.cpp HoughCircles.cpp HoughLines.cpp Laplace.cpp light.cpp mask.cpp matchTemplate.cpp moments.cpp morphologyEx.cpp pointPolygonTest.cpp pyramid.cpp rand.cpp rotateRect.cpp "Shi-Tomasi.cpp" smooth.cpp sobel.cpp SVM.cpp threshold.cpp trackbar.cpp first_step.cpp video.cpp warpAffine.cpp xml.cpp
          xml.cpp
          warpAffine.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\warpaffine.cpp(28): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\warpaffine.cpp(29): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\warpaffine.cpp(31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\warpaffine.cpp(32): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\warpaffine.cpp(33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\warpaffine.cpp(28): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\warpaffine.cpp(29): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\warpaffine.cpp(31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\warpaffine.cpp(32): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\warpaffine.cpp(33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
          video.cpp
          first_step.cpp
          trackbar.cpp
          threshold.cpp
          SVM.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\svm.cpp(14): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\svm.cpp(14): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
          sobel.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\sobel.cpp(19): warning C4101: “c”: 未引用的局部变量
+     1>e:\opencv_learn_\opencv_test\opencv_test\sobel.cpp(19): warning C4101: “c”: 未引用的局部变量
          smooth.cpp
          Shi-Tomasi.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\shi-tomasi.cpp(93): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\shi-tomasi.cpp(93): warning C4018: “<”: 有符号/无符号不匹配
          rotateRect.cpp
          rand.cpp
          pyramid.cpp
          pointPolygonTest.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\pointpolygontest.cpp(19): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\pointpolygontest.cpp(21): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\pointpolygontest.cpp(22): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\pointpolygontest.cpp(24): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\pointpolygontest.cpp(48): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\pointpolygontest.cpp(48): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\pointpolygontest.cpp(78): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\pointpolygontest.cpp(82): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\pointpolygontest.cpp(19): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\pointpolygontest.cpp(21): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\pointpolygontest.cpp(22): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\pointpolygontest.cpp(24): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\pointpolygontest.cpp(48): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\pointpolygontest.cpp(48): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\pointpolygontest.cpp(78): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\pointpolygontest.cpp(82): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
          morphologyEx.cpp
          moments.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\moments.cpp(55): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\moments.cpp(62): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\moments.cpp(64): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\moments.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\moments.cpp(82): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\moments.cpp(55): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\moments.cpp(62): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\moments.cpp(64): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\moments.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\moments.cpp(82): warning C4018: “<”: 有符号/无符号不匹配
          matchTemplate.cpp
          mask.cpp
          light.cpp
          Laplace.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\laplace.cpp(21): warning C4101: “c”: 未引用的局部变量
+     1>e:\opencv_learn_\opencv_test\opencv_test\laplace.cpp(21): warning C4101: “c”: 未引用的局部变量
          正在生成代码...
          正在编译...
          HoughLines.cpp
@@ -51,60 +51,63 @@
          harris.cpp
          floodfill.cpp
          FLANN.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\flann.cpp(82): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\flann.cpp(82): warning C4018: “<”: 有符号/无符号不匹配
          findHomography.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\findhomography.cpp(83): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\findhomography.cpp(101): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\findhomography.cpp(102): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\findhomography.cpp(103): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\findhomography.cpp(104): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\findhomography.cpp(83): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\findhomography.cpp(101): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\findhomography.cpp(102): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\findhomography.cpp(103): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\findhomography.cpp(104): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
          findcontours.cpp
          feature_describe.cpp
          FeatureDetector.cpp
          face_ CascadeClassifier.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\face_ cascadeclassifier.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\face_ cascadeclassifier.cpp(71): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\face_ cascadeclassifier.cpp(72): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\face_ cascadeclassifier.cpp(80): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\face_ cascadeclassifier.cpp(82): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\face_ cascadeclassifier.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\face_ cascadeclassifier.cpp(71): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\face_ cascadeclassifier.cpp(72): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\face_ cascadeclassifier.cpp(80): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\face_ cascadeclassifier.cpp(82): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
          EqualizeHist .cpp
          emapping.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\emapping.cpp(78): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\emapping.cpp(79): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\emapping.cpp(88): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\emapping.cpp(89): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\emapping.cpp(92): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\emapping.cpp(93): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\emapping.cpp(96): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\emapping.cpp(97): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\emapping.cpp(78): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\emapping.cpp(79): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\emapping.cpp(88): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\emapping.cpp(89): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\emapping.cpp(92): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\emapping.cpp(93): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\emapping.cpp(96): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\emapping.cpp(97): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
          draw.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\draw.cpp(34): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\draw.cpp(54): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\draw.cpp(55): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\draw.cpp(99): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\draw.cpp(34): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\draw.cpp(54): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\draw.cpp(55): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\draw.cpp(99): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
          distanceTransform.cpp
          DFT.cpp
          cornerSubPix.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\cornersubpix.cpp(78): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\cornersubpix.cpp(121): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\cornersubpix.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\opencv_learn_\opencv_test\opencv_test\cornersubpix.cpp(78): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\opencv_learn_\opencv_test\opencv_test\cornersubpix.cpp(121): warning C4018: “<”: 有符号/无符号不匹配
          cornerEigenValsAndVecs.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\cornereigenvalsandvecs.cpp(36): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\cornereigenvalsandvecs.cpp(71): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\cornereigenvalsandvecs.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\opencv_learn_\opencv_test\opencv_test\cornereigenvalsandvecs.cpp(36): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>e:\opencv_learn_\opencv_test\opencv_test\cornereigenvalsandvecs.cpp(71): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
          convexHull.cpp
          compareHist.cpp
+     1>e:\opencv_learn_\opencv_test\opencv_test\comparehist.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
          canny.cpp
          正在生成代码...
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\canny.cpp(54): warning C4715: “canny_main”: 不是所有的控件路径都返回值
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\houghlines.cpp(83): warning C4715: “hough_line_main”: 不是所有的控件路径都返回值
+     1>e:\opencv_learn_\opencv_test\opencv_test\canny.cpp(54): warning C4715: “canny_main”: 不是所有的控件路径都返回值
+     1>e:\opencv_learn_\opencv_test\opencv_test\houghlines.cpp(83): warning C4715: “hough_line_main”: 不是所有的控件路径都返回值
          正在编译...
          calcHist .cpp
          calcBackProject.cpp
          boundingRect.cpp
          addWeighted.cpp
-     1>d:\opencv_project\opencv_learn\opencv_test\opencv_test\addweighted.cpp(11): warning C4101: “input”: 未引用的局部变量
+     1>e:\opencv_learn_\opencv_test\opencv_test\addweighted.cpp(11): warning C4101: “input”: 未引用的局部变量
          正在生成代码...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\opencv_project\opencv_learn\opencv_test\Debug\opencv_test.exe" /INCREMENTAL /NOLOGO opencv_objdetect2410d.lib opencv_ts2410d.lib opencv_video2410d.lib opencv_nonfree2410d.lib opencv_ocl2410d.lib opencv_photo2410d.lib opencv_stitching2410d.lib opencv_superres2410d.lib opencv_videostab2410d.lib opencv_calib3d2410d.lib opencv_contrib2410d.lib opencv_core2410d.lib opencv_features2d2410d.lib opencv_flann2410d.lib opencv_gpu2410d.lib opencv_highgui2410d.lib opencv_imgproc2410d.lib opencv_legacy2410d.lib opencv_ml2410d.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\opencv_project\opencv_learn\opencv_test\Debug\opencv_test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\opencv_project\opencv_learn\opencv_test\Debug\opencv_test.lib" /MACHINE:X86 Debug\addWeighted.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\opencv_learn_\opencv_test\Debug\opencv_test.exe" /INCREMENTAL /NOLOGO opencv_objdetect2413d.lib opencv_ts2413d.lib opencv_video2413d.lib opencv_nonfree2413d.lib opencv_ocl2413d.lib opencv_photo2413d.lib opencv_stitching2413d.lib opencv_superres2413d.lib opencv_videostab2413d.lib opencv_calib3d2413d.lib opencv_contrib2413d.lib opencv_core2413d.lib opencv_features2d2413d.lib opencv_flann2413d.lib opencv_gpu2413d.lib opencv_highgui2413d.lib opencv_imgproc2413d.lib opencv_legacy2413d.lib opencv_ml2413d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\opencv_learn_\opencv_test\Debug\opencv_test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\opencv_learn_\opencv_test\Debug\opencv_test.lib" /MACHINE:X86 Debug\addWeighted.obj
          Debug\boundingRect.obj
          Debug\calcBackProject.obj
          "Debug\calcHist .obj"
@@ -148,9 +151,10 @@
          Debug\video.obj
          Debug\warpAffine.obj
          Debug\xml.obj
-         opencv_test.vcxproj -> D:\opencv_project\opencv_learn\opencv_test\Debug\opencv_test.exe
-     1>已完成生成项目“D:\opencv_project\opencv_learn\opencv_test\opencv_test\opencv_test.vcxproj”(Rebuild 个目标)的操作。
+         LINK : 没有找到 E:\opencv_learn_\opencv_test\Debug\opencv_test.exe 或上一个增量链接没有生成它；正在执行完全链接
+         opencv_test.vcxproj -> E:\opencv_learn_\opencv_test\Debug\opencv_test.exe
+     1>已完成生成项目“E:\opencv_learn_\opencv_test\opencv_test\opencv_test.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:28.99
+已用时间 00:00:25.99

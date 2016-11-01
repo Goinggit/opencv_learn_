@@ -1,28 +1,33 @@
-﻿生成启动时间为 2016/9/2 10:33:20。
-     1>项目“D:\opencv_project\opencv_learn\opencv_test\opencv_test\opencv_test.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2016/10/29 23:19:48。
+     1>项目“E:\opencv_learn_\opencv_test\opencv_test\opencv_test.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cornerEigenValsAndVecs.cpp
-         cornerEigenValsAndVecs.cpp
-     1>D:\opencv\build\include\opencv2/core/mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>D:\opencv\build\include\opencv2/core/persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>D:\opencv\build\include\opencv2/core/utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>cornerEigenValsAndVecs.cpp(36): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-     1>cornerEigenValsAndVecs.cpp(71): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt car_plate.cpp
+         car_plate.cpp
+     1>car_plate.cpp(64): warning C4018: “<”: 有符号/无符号不匹配
+     1>car_plate.cpp(78): warning C4018: “<”: 有符号/无符号不匹配
+     1>car_plate.cpp(92): warning C4018: “<”: 有符号/无符号不匹配
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\opencv_project\opencv_learn\opencv_test\Release\opencv_test.exe" /INCREMENTAL:NO /NOLOGO opencv_world300.lib opencv_ts300.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\opencv_project\opencv_learn\opencv_test\Release\opencv_test.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\opencv_project\opencv_learn\opencv_test\Release\opencv_test.lib" /MACHINE:X86 /SAFESEH Release\addWeighted.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\opencv_learn_\opencv_test\Release\opencv_test.exe" /INCREMENTAL:NO /NOLOGO opencv_objdetect2413.lib opencv_ts2413.lib opencv_video2413.lib opencv_nonfree2413.lib opencv_ocl2413.lib opencv_photo2413.lib opencv_stitching2413.lib opencv_superres2413.lib opencv_videostab2413.lib opencv_calib3d2413.lib opencv_contrib2413.lib opencv_core2413.lib opencv_features2d2413.lib opencv_flann2413.lib opencv_gpu2413.lib opencv_highgui2413.lib opencv_imgproc2413.lib opencv_legacy2413.lib opencv_ml2413.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\opencv_learn_\opencv_test\Release\opencv_test.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\opencv_learn_\opencv_test\Release\opencv_test.lib" /MACHINE:X86 /SAFESEH Release\addWeighted.obj
          Release\boundingRect.obj
          Release\calcBackProject.obj
          "Release\calcHist .obj"
          Release\canny.obj
+         Release\car_plate.obj
          Release\compareHist.obj
          Release\convexHull.obj
          Release\cornerEigenValsAndVecs.obj
+         Release\cornerSubPix.obj
          Release\DFT.obj
          Release\distanceTransform.obj
          Release\draw.obj
          Release\emapping.obj
          "Release\EqualizeHist .obj"
+         "Release\face_ CascadeClassifier.obj"
+         Release\FeatureDetector.obj
+         Release\feature_describe.obj
          Release\findcontours.obj
+         Release\findHomography.obj
+         Release\FLANN.obj
          Release\floodfill.obj
          Release\harris.obj
          Release\HoughCircles.obj
@@ -36,19 +41,22 @@
          Release\pointPolygonTest.obj
          Release\pyramid.obj
          Release\rand.obj
+         Release\rotateRect.obj
          "Release\Shi-Tomasi.obj"
          Release\smooth.obj
          Release\sobel.obj
+         Release\SVM.obj
          Release\threshold.obj
          Release\trackbar.obj
          Release\first_step.obj
          Release\video.obj
          Release\warpAffine.obj
+         Release\xml.obj
          正在生成代码
          已完成代码的生成
-         opencv_test.vcxproj -> D:\opencv_project\opencv_learn\opencv_test\Release\opencv_test.exe
-     1>已完成生成项目“D:\opencv_project\opencv_learn\opencv_test\opencv_test\opencv_test.vcxproj”(Build 个目标)的操作。
+         opencv_test.vcxproj -> E:\opencv_learn_\opencv_test\Release\opencv_test.exe
+     1>已完成生成项目“E:\opencv_learn_\opencv_test\opencv_test\opencv_test.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:04.12
+已用时间 00:00:02.72
