@@ -4,7 +4,7 @@
 
 using namespace cv;
 
-int SVM_main()
+int svm_main()
 {
 	// Data for visual representation
 	int width = 512, height = 512;

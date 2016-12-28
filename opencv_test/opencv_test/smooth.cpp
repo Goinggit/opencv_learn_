@@ -22,13 +22,13 @@ char window_name[] = "Filter Demo 1";
 int display_dst(int delay);
 
 /** *  main ∫Ø ˝ */
-int smooth_main(int argc, char** argv)
+int main(int argc, char** argv)
 {
 	namedWindow(window_name, CV_WINDOW_AUTOSIZE);
 
 	/// ‘ÿ»Î‘≠ÕºœÒ
-	src = imread("tiger.jpg", 1);
-
+	src = imread("C:\\Users\\going\\Desktop\\Õº∆¨\\16305781501.jpg", 1);
+	resize(src, src,Size(src.cols/2, src.rows/2));
 	if (display_caption("Original Image") != 0){ 
 		return 0; 
 	}

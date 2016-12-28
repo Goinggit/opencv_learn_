@@ -19,16 +19,16 @@ static void help(char* progName)
 }
 
 void dft_magnitude(Mat & I);
-int dtf_main(int argc, char ** argv)
+int DFT_main()
 {
-	help(argv[0]);
 
-	const char* filename = argc >= 2 ? argv[1] : "imageTextN.png";
+	const char* filename =  "C:\\Users\\going\\Desktop\\16260129101.jpg";
 
 	Mat I = imread(filename, CV_LOAD_IMAGE_GRAYSCALE);
+	//imshow("777", I);
 	if (I.empty())
 		return -1;
-
+	
 	dft_magnitude(I);
 
 	return 0;
@@ -82,7 +82,22 @@ void dft_magnitude(Mat & I)
 
 	normalize(magI, magI, 0, 1, CV_MINMAX); // Transform the matrix with float values into a
 	// viewable image form (float between values 0 and 1).
-
+	uchar * ptr = magI.data;
+	int sum = 0;
+	int count = 1;
+	for (int i = magI.cols / 2 - 10; i <=  magI.cols / 2 + 10; i++){
+		for (int j = magI.rows / 2 - 10; j <= magI.rows / 2 + 10; j++){
+		//	printf("%d\n", magI.at<uchar>(i, j));
+			sum += magI.at<uchar>(i, j);
+			count++;
+		}
+		
+	}
+	printf("%d\n", sum / count);
+	//printf("%d\n", magI.at<uchar>(magI.cols / 2-1, magI.rows / 2 -1));
+	//printf("%d\n", magI.at<Vec3b>(magI.cols / 2, magI.rows / 2)[1]);
+	//printf("%d\n", magI.at<Vec3b>(magI.cols / 2, magI.rows / 2)[2]);
+	//printf("%d\n", (magI.at<Vec3b>(magI.cols / 2, magI.rows / 2)[2] + magI.at<Vec3b>(magI.cols / 2, magI.rows / 2)[0] + magI.at<Vec3b>(magI.cols / 2, magI.rows / 2)[2])/3);
 	imshow("Input Image", I);    // Show the result
 	imshow("spectrum magnitude", magI);
 	waitKey();

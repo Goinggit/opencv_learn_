@@ -120,6 +120,7 @@
     <ClCompile Include="matchTemplate.cpp" />
     <ClCompile Include="moments.cpp" />
     <ClCompile Include="morphologyEx.cpp" />
+    <ClCompile Include="mser.cpp" />
     <ClCompile Include="pointPolygonTest.cpp" />
     <ClCompile Include="pyramid.cpp" />
     <ClCompile Include="rand.cpp" />

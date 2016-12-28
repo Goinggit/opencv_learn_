@@ -13,10 +13,10 @@ void detectAndDisplay(Mat frame);
 
 /** 全局变量 */ 
 string face_cascade1_name_3_4 = "trainout3-4.xml";
-string face_cascade1_name_3_3 = "trainout3-3.xml";
-string face_cascade1_name_3_0 = "trainout3-0.xml";
-//char *pic_name = "C:\\Users\\going\\Desktop\\图片\\u=4124764883,1308609052&fm=21&gp=0.jpg";
-char *pic_name = "C:\\Users\\going\\Desktop\\新建文件夹 (3)\\u=1393050249,4129611843&fm=21&gp=0.jpg";
+string face_cascade1_name_3_3 = "us.xml";
+string face_cascade1_name_3_0 = "au.xml";
+//char *pic_name = "C:\\Users\\going\\Desktop\\图片\\16260632501.jpg";
+char *pic_name = "C:\\Users\\going\\Desktop\\图片\\16270977001.jpg";
 CascadeClassifier Cplate3_0;
 CascadeClassifier Cplate3_3;
 CascadeClassifier Cplate3_4;
@@ -24,7 +24,7 @@ CascadeClassifier Cplate3_4;
 
 
 /** @主函数 */
-int main(int argc, const char** argv)
+int car_plate_main(int argc, const char** argv)
 {
 
 	//-- 1. 加载级联分类器文件

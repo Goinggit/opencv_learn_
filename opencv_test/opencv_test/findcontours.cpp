@@ -69,6 +69,7 @@ void thresh_callback(int, void*)
 	CV_RETR_LIST：取得所有輪廓，不建立階層(hierarchy)。
 	CV_RETR_CCOMP：取得所有輪廓，儲存成兩層的階層，首階層為物件外圍，第二階層為內部空心部分的輪廓，如果更內部有其餘物件，包含於首階層。
 	CV_RETR_TREE：取得所有輪廓，以全階層的方式儲存。
+
 	method：儲存輪廓點的方法，有以下幾種可選擇：
 
 	CV_CHAIN_APPROX_NONE：儲存所有輪廓點。
